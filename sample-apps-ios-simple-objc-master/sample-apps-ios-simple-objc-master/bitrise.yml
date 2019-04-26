@@ -64,8 +64,8 @@ workflows:
         inputs:
         - jira_password: "$API"
         - jira_instance_url: https://dragonsoft.atlassian.net/
-        - issue_id_or_key_list: AIOR-31
-        - field_key: customfield_10818
+        - issue_id_or_key_list: AIOR-32
+        - field_key: customfield_10819
         - field_value: '7'
         - jira_username: "$user"
 app:
