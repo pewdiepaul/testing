@@ -47,7 +47,7 @@ workflows:
         inputs:
         - api_token: "$key"
         - issue_keys: AIOR|AIOR-|AIOR-30|AIOR-29
-        - base_url: "$key2"
+        - base_url: "$key"
         - build_message: |
             *$BITRISE_APP_TITLE* build *$BITRISE_BUILD_NUMBER* is now available: [Download|$BITRISE_PUBLIC_INSTALL_PAGE_URL]
             ||Build number|$BITRISE_BUILD_NUMBER|
