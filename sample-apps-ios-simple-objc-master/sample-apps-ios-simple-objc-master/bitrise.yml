@@ -60,6 +60,14 @@ workflows:
             reeeeeeeeeeeeeee
             we are monkeys
         - user_name: "$user"
+    - update-jira-issue-field@1.0.2:
+        inputs:
+        - jira_password: "$API"
+        - jira_instance_url: https://dragonsoft.atlassian.net/
+        - issue_id_or_key_list: AIOR-29
+        - field_key: '10818'
+        - field_value: '7'
+        - jira_username: "$user"
 app:
   envs:
   - opts:
