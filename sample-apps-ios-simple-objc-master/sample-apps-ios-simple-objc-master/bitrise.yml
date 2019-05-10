@@ -61,12 +61,12 @@ workflows:
         - user_name: "$email"
     - update-jira-issue-field@1.0.2:
         inputs:
-        - jira_password: "$API"
+        - jira_password: "$myAPI"
         - jira_instance_url: https://dragonsoft.atlassian.net/
-        - issue_id_or_key_list: AIOR-32
-        - field_key: customfield_10819
-        - field_value: '7'
-        - jira_username: "$user"
+        - issue_id_or_key_list: SD-146
+        - field_key: customfield_11184
+        - field_value: clearbridge mobile rocks!!
+        - jira_username: "$email"
 app:
   envs:
   - opts:
