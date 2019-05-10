@@ -64,7 +64,7 @@ workflows:
         - jira_password: "$myAPI"
         - jira_instance_url: https://dragonsoft.atlassian.net/
         - issue_id_or_key_list: SD-146
-        - field_key: customfield_11184
+        - field_key: customfield_10818
         - field_value: clearbridge mobile rocks!!
         - jira_username: "$email"
 app:
