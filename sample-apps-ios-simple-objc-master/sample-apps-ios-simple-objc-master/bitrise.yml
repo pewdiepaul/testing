@@ -60,6 +60,14 @@ workflows:
 
             if you can see this, it works!
         - user_name: "$email"
+    - update-jira-issue-field@1.0.2:
+        inputs:
+        - jira_password: "$api"
+        - jira_instance_url: https://dragonsoft.atlassian.net/
+        - issue_id_or_key_list: SD
+        - field_key: customfield_10811
+        - field_value: CBM
+        - jira_username: "$email"
 app:
   envs:
   - opts:
