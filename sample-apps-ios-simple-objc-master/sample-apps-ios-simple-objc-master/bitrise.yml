@@ -45,9 +45,9 @@ workflows:
     - cache-push@2.1.1: {}
     - post-jira-comment-with-build-details@1.1.0:
         inputs:
-        - api_token: "$API"
-        - issue_keys: AIOR-30|AIOR-29
-        - base_url: "$baseURL"
+        - api_token: "$myAPI"
+        - issue_keys: SD-146
+        - base_url: "$myURL"
         - build_message: |
             *$BITRISE_APP_TITLE* build *$BITRISE_BUILD_NUMBER* is now available: [Download|$BITRISE_PUBLIC_INSTALL_PAGE_URL]
             ||Build number|$BITRISE_BUILD_NUMBER|
@@ -57,8 +57,8 @@ workflows:
             ||Commit message|$GIT_CLONE_COMMIT_MESSAGE_SUBJECT|
 
             [Show build details|$BITRISE_BUILD_URL]
-            testing - should show up if this works.
-        - user_name: "$user"
+            testing - should show up if this works!!!
+        - user_name: "$email"
     - update-jira-issue-field@1.0.2:
         inputs:
         - jira_password: "$API"
