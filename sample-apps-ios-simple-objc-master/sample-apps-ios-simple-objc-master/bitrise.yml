@@ -43,11 +43,11 @@ workflows:
         - scheme: "$BITRISE_SCHEME"
     - deploy-to-bitrise-io@1.3.19: {}
     - cache-push@2.1.1: {}
-    - post-jira-comment-with-build-details@1.1.0:
+    - post-jira-comment-with-build-details:
         inputs:
-        - api_token: "$myAPI"
+        - api_token: "$api"
         - issue_keys: SD-146
-        - base_url: "$myURL"
+        - base_url: "$baseURL"
         - build_message: |
             *$BITRISE_APP_TITLE* build *$BITRISE_BUILD_NUMBER* is now available: [Download|$BITRISE_PUBLIC_INSTALL_PAGE_URL]
             ||Build number|$BITRISE_BUILD_NUMBER|
@@ -57,16 +57,9 @@ workflows:
             ||Commit message|$GIT_CLONE_COMMIT_MESSAGE_SUBJECT|
 
             [Show build details|$BITRISE_BUILD_URL]
-            testing - should show up if this works!!!
+
+            if you can see this, it works!
         - user_name: "$email"
-    - update-jira-issue-field@1.0.2:
-        inputs:
-        - jira_password: "$myAPI"
-        - jira_instance_url: https://dragonsoft.atlassian.net/
-        - issue_id_or_key_list: SD-146
-        - field_key: customfield_10818
-        - field_value: clearbridge mobile rocks!!
-        - jira_username: "$email"
 app:
   envs:
   - opts:
