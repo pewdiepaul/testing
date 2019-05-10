@@ -57,8 +57,7 @@ workflows:
             ||Commit message|$GIT_CLONE_COMMIT_MESSAGE_SUBJECT|
 
             [Show build details|$BITRISE_BUILD_URL]
-            reeeeeeeeeeeeeee
-            we are monkeys
+            testing - should show up if this works.
         - user_name: "$user"
     - update-jira-issue-field@1.0.2:
         inputs:
